@@ -22,6 +22,14 @@
       <IsMain>false</IsMain>
       <Path>States\Init\CleanupAndPrep.pix</Path>
     </ProjectFileItem>
+    <ProjectFileItem z:Id="i7">
+      <IsMain>false</IsMain>
+      <Path>Infrastructure\DataBase\GetDbConnectionString.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i8">
+      <IsMain>false</IsMain>
+      <Path>Infrastructure\PIX Master\GetAppCredential.pix</Path>
+    </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />
   <Name>PIX-StateMachines-Template-A</Name>

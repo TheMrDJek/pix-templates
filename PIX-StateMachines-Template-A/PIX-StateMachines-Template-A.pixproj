@@ -10,6 +10,18 @@
       <IsMain>false</IsMain>
       <Path>States\Init\InitConfig.pix</Path>
     </ProjectFileItem>
+    <ProjectFileItem z:Id="i4">
+      <IsMain>false</IsMain>
+      <Path>States\Init\InitApplication.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i5">
+      <IsMain>false</IsMain>
+      <Path>Helpers\KillProcess.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i6">
+      <IsMain>false</IsMain>
+      <Path>States\Init\CleanupAndPrep.pix</Path>
+    </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />
   <Name>PIX-StateMachines-Template-A</Name>

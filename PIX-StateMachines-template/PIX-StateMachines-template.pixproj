@@ -30,9 +30,13 @@
       <IsMain>false</IsMain>
       <Path>Infrastructure\PIX Master\GetAppCredential.pix</Path>
     </ProjectFileItem>
+    <ProjectFileItem z:Id="i9">
+      <IsMain>false</IsMain>
+      <Path>States\GetSetTransaction\GetTransactionItem.pix</Path>
+    </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />
-  <Name>PIX-StateMachines-Template-A</Name>
+  <Name>PIX-StateMachines-template</Name>
   <ProjectMaterUploadIds />
   <Version xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
     <d2p1:_Build>-1</d2p1:_Build>

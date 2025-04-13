@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Отчет о выполнении с вложениями - {robotName}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 800px; margin: 0 auto; border: 1px solid #ddd; border-radius: 5px; overflow: hidden; }
+        .header { background-color: #673AB7; color: white; padding: 15px; font-size: 18px; font-weight: bold; }
+        .content { padding: 20px; }
+        .section { margin-bottom: 20px; }
+        .section-title { font-weight: bold; margin-bottom: 10px; color: #673AB7; }
+        .table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .table th, .table td { padding: 10px; text-align: left; border: 1px solid #ddd; }
+        .table th { background-color: #f2f2f2; }
+        .summary { background-color: #f3e5ff; border-left: 4px solid #673AB7; padding: 15px; margin-bottom: 20px; }
+        .attachments { background-color: #f9f9f9; border: 1px dashed #ccc; padding: 15px; margin-top: 20px; }
+        .attachment { display: flex; align-items: center; margin-bottom: 10px; padding: 10px; border-bottom: 1px solid #eee; }
+        .attachment-icon { margin-right: 15px; color: #673AB7; font-size: 24px; }
+        .attachment-details { flex-grow: 1; }
+        .attachment-name { font-weight: bold; }
+        .attachment-info { color: #666; font-size: 12px; }
+        .footer { padding: 15px; background-color: #f2f2f2; font-size: 12px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Отчет о выполнении с вложениями: {robotName}
+        </div>
+        <div class="content">
+            <div class="summary">
+                <p><strong>Период отчета:</strong> {reportPeriod}</p>
+                <p><strong>Статус:</strong> {status}</p>
+                <p><strong>Время формирования:</strong> {dateTime}</p>
+            </div>
+            <div class="section">
+                <div class="section-title">Основная информация</div>
+                <p>
+                    Уважаемый пользователь!<br>
+                    Во вложении к этому письму вы найдете детальный отчет о выполнении задачи робота {robotName}.
+                    Ниже представлена краткая сводка результатов.
+                </p>
+            </div>
+            <div class="section">
+                <div class="section-title">Краткая статистика</div>
+                <table class="table">
+                    <tr>
+                        <th>Показатель</th>
+                        <th>Значение</th>
+                    </tr>
+                    <tr>
+                        <td>Обработано документов</td>
+                        <td>{processedDocuments}</td>
+                    </tr>
+                    <tr>
+                        <td>Успешно обработано</td>
+                        <td>{successfulDocuments}</td>
+                    </tr>
+                    <tr>
+                        <td>Обработано с ошибками</td>
+                        <td>{failedDocuments}</td>
+                    </tr>
+                    <tr>
+                        <td>Общее время работы</td>
+                        <td>{totalExecutionTime} мин.</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="section">
+                <div class="section-title">Вложения</div>
+                <div class="attachments">
+                    <div class="attachment">
+                        <div class="attachment-icon">📊</div>
+                        <div class="attachment-details">
+                            <div class="attachment-name">Детальный отчет.xlsx</div>
+                            <div class="attachment-info">Excel файл, {reportSize} КБ, создан {reportCreatedDate}</div>
+                        </div>
+                    </div>
+                    <div class="attachment">
+                        <div class="attachment-icon">📄</div>
+                        <div class="attachment-details">
+                            <div class="attachment-name">Журнал ошибок.txt</div>
+                            <div class="attachment-info">Текстовый файл, {logSize} КБ, создан {logCreatedDate}</div>
+                        </div>
+                    </div>
+                    <div class="attachment">
+                        <div class="attachment-icon">📋</div>
+                        <div class="attachment-details">
+                            <div class="attachment-name">Сводка результатов.pdf</div>
+                            <div class="attachment-info">PDF файл, {summarySize} КБ, создан {summaryCreatedDate}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">Примечания</div>
+                <p>{notes}</p>
+            </div>
+        </div>
+        <div class="footer">
+            Это автоматический отчет от системы PIX RPA. Пожалуйста, не отвечайте на это письмо.
+            По всем вопросам обращайтесь: {contactInfo}
+        </div>
+    </div>
+</body>
+</html> 

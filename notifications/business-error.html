@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Обнаружена бизнес-ошибка - {processName}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 700px; margin: 0 auto; border: 1px solid #ddd; border-radius: 5px; overflow: hidden; }
+        .header { background-color: #3F51B5; color: white; padding: 15px; font-size: 18px; font-weight: bold; }
+        .content { padding: 20px; }
+        .section { margin-bottom: 20px; }
+        .section-title { font-weight: bold; margin-bottom: 5px; color: #3F51B5; }
+        .table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .table th, .table td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        .table th { background-color: #f2f2f2; }
+        .business-error { background-color: #f2f4ff; border-left: 4px solid #3F51B5; padding: 15px; }
+        .impact { background-color: #fff9e6; border-left: 4px solid #FFB300; padding: 15px; margin-top: 10px; }
+        .footer { padding: 15px; background-color: #f2f2f2; font-size: 12px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Уведомление о бизнес-ошибке: {processName}
+        </div>
+        <div class="content">
+            <div class="section">
+                <div class="section-title">Здравствуйте, {userName}!</div>
+                <div>В процессе обработки данных обнаружена бизнес-ошибка, требующая вашего внимания.</div>
+            </div>
+            <div class="section">
+                <div class="section-title">Детали ошибки:</div>
+                <div class="business-error">
+                    {businessErrorDescription}
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">Информация о документе:</div>
+                <table class="table">
+                    <tr>
+                        <th>Параметр</th>
+                        <th>Значение</th>
+                    </tr>
+                    <tr>
+                        <td>Номер документа</td>
+                        <td>{documentNumber}</td>
+                    </tr>
+                    <tr>
+                        <td>Дата документа</td>
+                        <td>{documentDate}</td>
+                    </tr>
+                    <tr>
+                        <td>Контрагент</td>
+                        <td>{counterparty}</td>
+                    </tr>
+                    <tr>
+                        <td>Сумма</td>
+                        <td>{amount} {currency}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="section">
+                <div class="section-title">Влияние на бизнес-процесс:</div>
+                <div class="impact">
+                    {impactDescription}
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">Рекомендуемые действия:</div>
+                <ol>
+                    <li>Проверьте указанные в документе данные</li>
+                    <li>Внесите необходимые корректировки в исходную систему</li>
+                    <li>При необходимости свяжитесь с ответственным сотрудником</li>
+                </ol>
+            </div>
+        </div>
+        <div class="footer">
+            Это автоматическое уведомление от системы PIX RPA. Вы получили его, так как являетесь ответственным за процесс.
+            По всем вопросам обращайтесь: {contactInfo}
+        </div>
+    </div>
+</body>
+</html> 
